@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Fighting Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ゲームキャンバス / Game Canvas -->
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI オーバーレイ / UI Overlay -->
+        <div id="ui-overlay">
+            <!-- プレイヤー1 HUD / Player 1 HUD -->
+            <div id="player1-hud" class="player-hud left">
+                <div class="player-name">PLAYER 1</div>
+                <div class="form-name" id="p1-form-name">ベースフォーム</div>
+                <div class="hp-container">
+                    <div class="hp-bar" id="p1-hp-bar"></div>
+                    <div class="hp-text" id="p1-hp-text">100 / 100</div>
+                </div>
+                <div class="stamina-container">
+                    <div class="stamina-bar" id="p1-stamina-bar"></div>
+                    <div class="stamina-text" id="p1-stamina-text">100 / 100</div>
+                </div>
+            </div>
+
+            <!-- プレイヤー2 HUD / Player 2 HUD -->
+            <div id="player2-hud" class="player-hud right">
+                <div class="player-name">PLAYER 2</div>
+                <div class="form-name" id="p2-form-name">ベースフォーム</div>
+                <div class="hp-container">
+                    <div class="hp-bar" id="p2-hp-bar"></div>
+                    <div class="hp-text" id="p2-hp-text">100 / 100</div>
+                </div>
+                <div class="stamina-container">
+                    <div class="stamina-bar" id="p2-stamina-bar"></div>
+                    <div class="stamina-text" id="p2-stamina-text">100 / 100</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- スクリプト読み込み / Script Loading -->
+    <script src="js/forms.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/attacks.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

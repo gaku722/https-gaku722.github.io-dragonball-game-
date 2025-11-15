@@ -1,0 +1,198 @@
+/* リセットとベーススタイル / Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ゲームコンテナ / Game Container */
+#game-container {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    background: #000;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* UI オーバーレイ / UI Overlay */
+#ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* プレイヤーHUD / Player HUD */
+.player-hud {
+    position: absolute;
+    top: 20px;
+    width: 400px;
+    color: white;
+}
+
+.player-hud.left {
+    left: 20px;
+}
+
+.player-hud.right {
+    right: 20px;
+    text-align: right;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.form-name {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ffd700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* HPバー / HP Bar */
+.hp-container {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #fff;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hp-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00ff00 0%, #00cc00 100%);
+    transition: width 0.3s ease;
+}
+
+.hp-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+/* スタミナバー / Stamina Bar */
+.stamina-container {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.stamina-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00ffff 0%, #0088ff 100%);
+    transition: width 0.3s ease;
+}
+
+.stamina-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+/* 管理者コントロール (ゲーム内) / Admin Controls (In-game) */
+.admin-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: auto;
+    z-index: 100;
+}
+
+.admin-controls.hidden {
+    display: none;
+}
+
+.admin-row {
+    display: flex;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid rgba(74, 144, 226, 0.6);
+}
+
+.admin-player {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-label {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.admin-btn {
+    padding: 5px 12px;
+    background: rgba(74, 144, 226, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.2s ease;
+}
+
+.admin-btn:hover {
+    background: rgba(74, 144, 226, 1);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.admin-btn:active {
+    transform: scale(0.95);
+}
+
+.admin-form-display {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 13px;
+    min-width: 150px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
